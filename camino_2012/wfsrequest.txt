@@ -1,0 +1,1 @@
+http://geo.datos.jalisco.gob.mx:80/geoserver/ckan/ows?service=WFS&version=1.0.0&request=GetFeature&typeName=ckan:Camino_2012&outputFormat=SHAPE-ZIP

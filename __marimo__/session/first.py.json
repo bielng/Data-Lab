@@ -1,0 +1,476 @@
+{
+  "version": "1",
+  "metadata": {
+    "marimo_version": "0.19.7"
+  },
+  "cells": [
+    {
+      "id": "Hbol",
+      "code_hash": "1d0db38904205bec4d6f6f6a1f6cec3e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "MJUe",
+      "code_hash": "f52de4cfd3b7a6e92bbd1219932dc25e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h1 id=\"modulo-1-extraccion-de-datos\">M\u00f3dulo 1: Extracci\u00f3n de datos</h1>\n<h2 id=\"-shapefiles-\">-- Shapefiles --</h2>\n<h3 id=\"objetivo\">Objetivo</h3>\n<ul>\n<li>\n<span class=\"paragraph\">Entender qu\u00e9 contiene un SHP as\u00ed como conceptos b\u00e1sicos de estos archivos.</span>\n<ul>\n<li>Aprender la importancia de los CRS y c\u00f3mo \u00e9sto nos puede ayudar a cuadrar mapas.</li>\n</ul>\n</li>\n<li>Visualizar mapas a partir de una serie de puntos, l\u00edneas y pol\u00edgonos.</li>\n<li>Graficar caracter\u00edsticas del AMG (\u00c1rea Metropolitana de Guadalajara).</li>\n</ul>\n<h3 id=\"actividades\">Actividades</h3>\n<h4 id=\"actividad-de-clase\">Actividad de clase</h4>\n<ul>\n<li>A partir de los archivos provistos de tren ligero del AMG y caminos, dibuje las l\u00edneas del tren as\u00ed como el de los caminos del estado (gr\u00e1ficos separados).</li>\n</ul>\n<h4 id=\"actividad-de-tarea\">Actividad de tarea</h4>\n<ul>\n<li>\n<span class=\"paragraph\">Tome el archivo de colonias, lea y grafique coloreando por municipio.</span>\n<ul>\n<li>El object type es <code>colonias</code>, estos files no tienen subcarpetas como los del tren.</li>\n</ul>\n</li>\n<li>\n<span class=\"paragraph\">Sobre el archivo de colonias agregue lo ya hecho de l\u00edneas del tren ligero.</span>\n<ul>\n<li>El objetivo de este punto es replicar la gr\u00e1fica que ya existe de estaciones con nombres M\u00c1S el plot de colonias.</li>\n<li>Para que te sea m\u00e1s f\u00e1cil preg\u00fantate, \u00bfnecesitas modificar algo del <code>for</code> para que esto funcione? Solo ten cuidado con que todo tenga el mismo <code>CRS</code> (El <code>CRS</code> indicado a utilizar es el <code>\"EPSG:4326\"</code>)</li>\n<li>Recuerda que para modificar el <code>CRS</code> de algo que ya sea un mapa (o sea que ya cuente con un <code>CRS</code>) debes usar el <code>to_crs</code>.</li>\n</ul>\n</li>\n</ul>\n<span class=\"paragraph\">Una excelente referencia: <a href=\"https://www.earthdatascience.org/workshops/gis-open-source-python/intro-vector-data-python/\" rel=\"noopener noreferrer\" target=\"_blank\">https://www.earthdatascience.org/workshops/gis-open-source-python/intro-vector-data-python/</a></span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "vblA",
+      "code_hash": "40570548378de103b6858b6a0d7fcced",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Los archivos shapefile albergan vectores de informaci\u00f3n geoespacial generalmente utilizado en GIS (Geographic Information System).</span>\n<h2 id=\"tipos-de-informacion\">Tipos de informaci\u00f3n</h2>\n<ul>\n<li>Puntos: Coordenadas x,y.</li>\n<li>L\u00edneas: Conexiones de 2+ puntos.</li>\n<li>Pol\u00edgonos: 3+ puntos que se conectan <strong>y se cierran</strong>.</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "bkHC",
+      "code_hash": "89744890d4069541cb85c8a0673cdbcf",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"estructura\">Estructura</h2>\n<ul>\n<li><code>.shp</code>: Contiene geometr\u00eda para todos los features.</li>\n<li><code>.shx</code>: Contiene los \u00edndices para toda la geometr\u00eda.</li>\n<li><code>.dbf</code>: Guarda metadatos en forma tabular.</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "lEQa",
+      "code_hash": "55eb53fb903e8bf2c00efd09ef457af3",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"metadata-espacial\">Metadata espacial</h2>\n<span class=\"paragraph\">Los metadatos son <em>los datos de los datos</em>. Si yo descargo un archivo .csv, el peso del archivo es un metadato.</span>\n<ul>\n<li><code>CRS</code>: Proyecci\u00f3n de la data. Coordinate Reference System. Nos ayuda a proyectar una serie de coordenadas de manera que tengan sentido en un mapa. Ver: <a href=\"https://geopandas.org/projections.html\" rel=\"noopener noreferrer\" target=\"_blank\">https://geopandas.org/projections.html</a></li>\n<li><code>Extent</code>: Espacio geogr\u00e1fico que cubre todos los objetos dentro del archivo shapefile.</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "PKri",
+      "code_hash": "9a0ed5f73dd677c071546da4268c5ac0",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"creando-puntos-lineas-y-poligonos\">Creando puntos, l\u00edneas y pol\u00edgonos</h2>\n<span class=\"paragraph\">Importante antes contar con la paqueter\u00eda <code>shapely</code>, <code>geopandas</code> y <code>descartes</code> instaladas.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Xref",
+      "code_hash": "e09edd0407e45803cb7528bb1ed7d2be",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "SFPL",
+      "code_hash": "19a30eed9b626e0726be6779cf04b6a7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "image/svg+xml": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"100.0\" height=\"100.0\" viewBox=\"-1.0 0.0 2.0 2.0\" preserveAspectRatio=\"xMinYMin meet\"><g transform=\"matrix(1,0,0,-1,0,2.0)\"><circle cx=\"0.0\" cy=\"1.0\" r=\"0.06\" stroke=\"#555555\" stroke-width=\"0.02\" fill=\"#66cc99\" opacity=\"0.6\" /></g></svg>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "BYtC",
+      "code_hash": "199ac94998272b3e523f04660796e2d1",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "image/svg+xml": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"100.0\" height=\"100.0\" viewBox=\"-0.08 0.92 2.16 2.16\" preserveAspectRatio=\"xMinYMin meet\"><g transform=\"matrix(1,0,0,-1,0,4.0)\"><polyline fill=\"none\" stroke=\"#66cc99\" stroke-width=\"0.0432\" points=\"0.0,1.0 2.0,3.0\" opacity=\"0.8\" /></g></svg>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "RGSE",
+      "code_hash": "67d942fad17e9d7b38773e0626d735fa",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "image/svg+xml": "<svg xmlns=\"http://www.w3.org/2000/svg\" xmlns:xlink=\"http://www.w3.org/1999/xlink\" width=\"100.0\" height=\"100.0\" viewBox=\"-0.04 -0.04 1.08 1.08\" preserveAspectRatio=\"xMinYMin meet\"><g transform=\"matrix(1,0,0,-1,0,1.0)\"><path fill-rule=\"evenodd\" fill=\"#66cc99\" stroke=\"#555555\" stroke-width=\"0.0216\" opacity=\"0.6\" d=\"M 0.0,0.0 L 1.0,0.0 L 1.0,1.0 L 0.0,0.0 z\" /></g></svg>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Kclp",
+      "code_hash": "57643cf9cda03cc3b446b52c8c278400",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"leyendo-shapefiles-shp\">Leyendo shapefiles (.shp)</h2>\n<h3 id=\"actividad-de-clase\">Actividad de clase:</h3>\n<ul>\n<li>A partir de los archivos provistos de tren ligero del AMG y caminos, dibuje las l\u00edneas del tren as\u00ed como el de los caminos del estado (gr\u00e1ficos separados).</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "emfo",
+      "code_hash": "ed0568e45e8d0657778f15eba0936334",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Hstk",
+      "code_hash": "3c39ff40ffdcfaec5258b8741d359048",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nWHF",
+      "code_hash": "7511b2701714b76135c1bf0e0fbb9e60",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nWHF-0' random-id='13568c6c-7693-ade1-976c-90b495b73073'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;OID_&#92;&quot;:0,&#92;&quot;Name&#92;&quot;:&#92;&quot;L&#92;&#92;u00ednea 1&#92;&quot;,&#92;&quot;FolderPath&#92;&quot;:&#92;&quot;SiteurL&#92;&#92;u00ednea 1&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;LINESTRING Z (666639.3636433491 2279504.598758803 0, 667183.6385518324 2280228.9896533825 0, 667824.2239957899 2281086.7513182163 0, 668279.7074619166 2281683.493780025 0, 668534.4841065353 2282062.805811314 0, 668731.5214506641 2282356.584216017 0, 668921.4461438501 2282641.4915129207 0, 669088.847992395 2282927.853681266 0, 669118.7806952139 2282978.0564994505 0, 669187.7025327808 2283075.7727342867 0, 669511.9373657072 2283476.8397094845 0, 669726.7335878919 2283743.7686792845 0, 669882.0012941136 2283948.3303096457 0, 670126.2155498238 2284287.8382845316 0, 670465.7950938627 2284747.731264571 0, 670717.2685245916 2285085.013058034 0, 670879.2981416604 2285274.3832469406 0, 670928.5465100133 2285309.078444487 0, 671039.8285611914 2285369.9266101876 0, 671057.9486867154 2285385.6230160175 0, 671128.5379367137 2285563.847930474 0, 671251.899260099 2285892.300142451 0, 671302.984427808 2286096.894893321 0, 671371.3976506671 2286381.8454729784 0, 671374.6222161882 2286549.5659006424 0, 671374.3224841715 2286740.1532287654 0, 671375.389533082 2287038.6028082483 0, 671376.1336405374 2287288.0960410433 0, 671386.2363948764 2287346.276660348 0, 671407.1933195433 2287389.026524002 0, 671424.7343244872 2287444.0119216307 0, 671433.5863073629 2287785.6569281486 0, 671444.6841516817 2288263.779530437 0, 671453.2150296611 2288683.5152431447 0, 671441.4303292129 2288870.4077214133 0, 671432.0625661453 2289062.540093609 0, 671419.9012353617 2289125.401755501 0, 671405.589017648 2289161.8735502944 0, 671329.0603549059 2289361.796163123 0, 671320.2201432551 2289409.4594522216 0, 671316.8443289846 2289467.4497588496 0, 671329.6004686656 2289748.967752896 0, 671341.666599131 2290183.9206957715 0, 671333.4851979228 2290515.8376547964 0, 671309.6579997296 2290571.7008683803 0, 671193.6570927706 2290811.9128788053 0, 671187.7544642517 2290854.012390377 0, 671213.4043552484 2291021.264640247 0, 671313.4865117406 2291297.127691246 0, 671343.6752557302 2291392.280868788 0, 671346.7711589553 2291490.913723146 0, 671355.0430750377 2291551.482574566 0, 671419.323954215 2291887.3793097166 0, 671466.5006998419 2292134.8417796222 0, 671484.8578381977 2292234.4938484174 0, 671489.9121771015 2292275.345558095 0, 671490.0259092023 2292331.106947553 0, 671481.8153072208 2292612.021762813 0, 671473.2021609776 2292905.7648833455 0, 671474.839205814 2292946.1799639943 0, 671478.7645002585 2292978.79519651 0, 671488.4371788909 2293021.1196338576 0, 671549.8324711337 2293171.351860205 0)&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;OID_&quot;,[&quot;integer&quot;,&quot;int32&quot;]],[&quot;Name&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;FolderPath&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;geometry&quot;,[&quot;unknown&quot;,&quot;geometry&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "iLit",
+      "code_hash": "ebe993033788e07ab163e53e6c4b3973",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Dada la forma en la que tenemos organizada la informaci\u00f3n (carpetas), crearemos una funci\u00f3n para leer. El ejemplo es de las l\u00edneas del tren ligero.</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZHCJ",
+      "code_hash": "49b8a1ffa3f9d814719aac48593921d8",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ROlb",
+      "code_hash": "66022f5de0cca45168e91252c277c452",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": [
+        {
+          "type": "stream",
+          "name": "stdout",
+          "text": "--> Initiating with .shp file reading over lineas type of files.\n--> Found file .shp: c_tren_l1.\n--> Found file .shp: c_tren_l2.\n--> Found file .shp: c_tren_l3.\nDone with file seek over lineas.\n--> Initiating with .shp file reading over estaciones type of files.\n--> Found file .shp: c_est_tren_l1.\n--> Found file .shp: c_est_tren_l2.\n--> Found file .shp: c_est_tren_l3.\nDone with file seek over estaciones.\n",
+          "mimetype": "text/plain"
+        }
+      ]
+    },
+    {
+      "id": "QgVe",
+      "code_hash": "8da7171f6b36820a2dd36b5cae245314",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "qnkX",
+      "code_hash": "844f5836b4132002ed4b959d1424e676",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<div style='display: flex;flex: 1;flex-direction: column;justify-content: flex-start;align-items: normal;flex-wrap: nowrap;gap: 0.5rem'><marimo-ui-element object-id='qnkX-0' random-id='8bea11b0-4594-437e-782e-58be6402c6d3'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;OID_&#92;&quot;:0,&#92;&quot;Name&#92;&quot;:&#92;&quot;L&#92;&#92;u00ednea 1&#92;&quot;,&#92;&quot;FolderPath&#92;&quot;:&#92;&quot;SiteurL&#92;&#92;u00ednea 1&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;LINESTRING Z (666639.3636433491 2279504.598758803 0, 667183.6385518324 2280228.9896533825 0, 667824.2239957899 2281086.7513182163 0, 668279.7074619166 2281683.493780025 0, 668534.4841065353 2282062.805811314 0, 668731.5214506641 2282356.584216017 0, 668921.4461438501 2282641.4915129207 0, 669088.847992395 2282927.853681266 0, 669118.7806952139 2282978.0564994505 0, 669187.7025327808 2283075.7727342867 0, 669511.9373657072 2283476.8397094845 0, 669726.7335878919 2283743.7686792845 0, 669882.0012941136 2283948.3303096457 0, 670126.2155498238 2284287.8382845316 0, 670465.7950938627 2284747.731264571 0, 670717.2685245916 2285085.013058034 0, 670879.2981416604 2285274.3832469406 0, 670928.5465100133 2285309.078444487 0, 671039.8285611914 2285369.9266101876 0, 671057.9486867154 2285385.6230160175 0, 671128.5379367137 2285563.847930474 0, 671251.899260099 2285892.300142451 0, 671302.984427808 2286096.894893321 0, 671371.3976506671 2286381.8454729784 0, 671374.6222161882 2286549.5659006424 0, 671374.3224841715 2286740.1532287654 0, 671375.389533082 2287038.6028082483 0, 671376.1336405374 2287288.0960410433 0, 671386.2363948764 2287346.276660348 0, 671407.1933195433 2287389.026524002 0, 671424.7343244872 2287444.0119216307 0, 671433.5863073629 2287785.6569281486 0, 671444.6841516817 2288263.779530437 0, 671453.2150296611 2288683.5152431447 0, 671441.4303292129 2288870.4077214133 0, 671432.0625661453 2289062.540093609 0, 671419.9012353617 2289125.401755501 0, 671405.589017648 2289161.8735502944 0, 671329.0603549059 2289361.796163123 0, 671320.2201432551 2289409.4594522216 0, 671316.8443289846 2289467.4497588496 0, 671329.6004686656 2289748.967752896 0, 671341.666599131 2290183.9206957715 0, 671333.4851979228 2290515.8376547964 0, 671309.6579997296 2290571.7008683803 0, 671193.6570927706 2290811.9128788053 0, 671187.7544642517 2290854.012390377 0, 671213.4043552484 2291021.264640247 0, 671313.4865117406 2291297.127691246 0, 671343.6752557302 2291392.280868788 0, 671346.7711589553 2291490.913723146 0, 671355.0430750377 2291551.482574566 0, 671419.323954215 2291887.3793097166 0, 671466.5006998419 2292134.8417796222 0, 671484.8578381977 2292234.4938484174 0, 671489.9121771015 2292275.345558095 0, 671490.0259092023 2292331.106947553 0, 671481.8153072208 2292612.021762813 0, 671473.2021609776 2292905.7648833455 0, 671474.839205814 2292946.1799639943 0, 671478.7645002585 2292978.79519651 0, 671488.4371788909 2293021.1196338576 0, 671549.8324711337 2293171.351860205 0)&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;OID_&quot;,[&quot;integer&quot;,&quot;int32&quot;]],[&quot;Name&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;FolderPath&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;geometry&quot;,[&quot;unknown&quot;,&quot;geometry&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element><marimo-ui-element object-id='qnkX-1' random-id='2afdc9c4-4760-d3a8-01b0-b2edba485291'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;OID_&#92;&quot;:0,&#92;&quot;Name&#92;&quot;:&#92;&quot;L&#92;&#92;u00ednea 2&#92;&quot;,&#92;&quot;FolderPath&#92;&quot;:&#92;&quot;SiteurL&#92;&#92;u00ednea 2&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;LINESTRING Z (671374.7806519591 2287038.455361886 0, 671760.332457704 2287055.4288203064 0, 672146.5342967173 2287072.747457945 0, 672573.5790381269 2287092.5825479846 0, 672725.0747770608 2287098.2996602175 0, 672779.5493442611 2287097.6906073457 0, 672803.3871551149 2287094.4911117237 0, 673072.6908978182 2287027.094686885 0, 673426.0122983996 2286928.712838781 0, 673702.8663098848 2286851.4970076955 0, 673899.1356246844 2286795.822405375 0, 674308.9402318818 2286678.39257781 0, 674537.8099681534 2286620.794709432 0, 674588.3584295247 2286607.1845105183 0, 675015.8524733981 2286475.137592662 0, 675402.4807297704 2286355.930185179 0, 675590.551843212 2286296.8131411346 0, 676165.930425731 2286119.138853109 0, 676545.2398389541 2285998.7685969286 0, 676670.0960495332 2285964.4090074315 0, 676848.4600356664 2285943.703514098 0, 677025.8119593426 2285929.5476098843 0, 677446.8000126872 2285870.9745121785 0, 677852.9943079201 2285815.0657151323 0, 678259.8580643047 2285755.4121829313 0, 678343.3869113722 2285752.5015133126 0, 678481.0035933296 2285752.940865196 0, 678964.8261332377 2285686.5620947545 0, 679128.5211897261 2285658.668369635 0, 679155.4484208259 2285651.822135209 0, 679179.6372168241 2285639.71104722 0, 679359.6671298404 2285502.618975906 0, 679395.6606604389 2285484.5916742585 0, 679434.6017921665 2285470.154324113 0, 679464.0155881117 2285464.508988447 0, 679616.5427476107 2285448.7218099535 0)&#92;&quot;}]&quot;' data-total-rows='1' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;OID_&quot;,[&quot;integer&quot;,&quot;int32&quot;]],[&quot;Name&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;FolderPath&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;geometry&quot;,[&quot;unknown&quot;,&quot;geometry&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='false' data-show-data-types='true' data-show-page-size-selector='false' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element></div>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TqIu",
+      "code_hash": "9e0b7d584072c39cdb02902bb1717a0c",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Parece que tenemos un ligero cochinero, pero accedamos al mismo archivo que le\u00edmos hace rato:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Vxnm",
+      "code_hash": "038c3ac96efc53504c8a27de642108c7",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='Vxnm-0' random-id='b9f983bf-2ec9-ad26-4e81-bd317ada7836'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION PERIFERICO SUR&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (666657.1745993838 2279493.6976143704)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION SANTUARIO MARTIRES DE CRISTO REY&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (667186.3423243848 2280225.007410322)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION ESPA&#92;&#92;u00d1A&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (667826.6352716365 2281080.9362055124)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION PATRIA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (668284.3653537648 2281674.926976829)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION ISLA RAZA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (668734.1579200161 2282344.324148954)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION 18 DE MARZO&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (669108.5440854549 2282944.929516832)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION URDANETA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (669537.1699427066 2283499.2327087712)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION UNIDAD DEPORTIVA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (669910.2331888344 2283974.160741959)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION SANTA FILOMENA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (670468.5051387104 2284740.1310238987)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION WASHINGTON&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Subterranea&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (671109.3964735892 2285500.646642378)&#92;&quot;}]&quot;' data-total-rows='18' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Id&quot;,[&quot;integer&quot;,&quot;int32&quot;]],[&quot;NOMBRE&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;Detalle&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;geometry&quot;,[&quot;unknown&quot;,&quot;geometry&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "DnEU",
+      "code_hash": "591c75072602abbf87b9b0f4075f8af9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ulZA",
+      "code_hash": "d46ed02950cc127a4a3df02fa7be9940",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ecfG",
+      "code_hash": "9c8d84a4e6d03397bf627ec3869875ec",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Es exactamente lo mismo, solo nos ayudamos de la funci\u00f3n para tener todo m\u00e1s organizado.</span>\n<span class=\"paragraph\">Sabemos que tenemos un diccionario de la forma:</span>\n<div class=\"language-scdoc codehilite\"><pre><span></span><code>dict = {nombre_archivo: geopandas con coordenadas}\n</code></pre></div>\n<span class=\"paragraph\">Grafiquemos un solo set usando <code>geopandas</code>:</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "Pvdt",
+      "code_hash": "b126624dd948140136a324b773cd9aa9",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "ZBYS",
+      "code_hash": "8c1a11cd09e5503a5f9a93188bbe00d4",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aLJB",
+      "code_hash": "c4107f8a981fde918a32e51ee6f939bd",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">Notamos que el CRS est\u00e1 raro (el est\u00e1ndar es 4326)</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "nHfw",
+      "code_hash": "4f912e23fad951ce8c7881cab20a6c19",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/html": "<marimo-ui-element object-id='nHfw-0' random-id='a8bc64a1-a44f-ca9c-39ca-996fe48ed9dc'><marimo-table data-initial-value='[]' data-label='null' data-data='&quot;[{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION PERIFERICO SUR&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.40073401418336 20.607186834339167)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION SANTUARIO MARTIRES DE CRISTO REY&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.39558836851646 20.61374534558326)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION ESPA&#92;&#92;u00d1A&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.38936428631602 20.62141934954921)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION PATRIA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.38491615435909 20.626743534028375)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION ISLA RAZA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.38053665843424 20.632749395833816)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION 18 DE MARZO&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.37688694070849 20.63814056983253)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION URDANETA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.37272095142896 20.64310852222654)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION UNIDAD DEPORTIVA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.36909549824406 20.647364449356537)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION SANTA FILOMENA&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Superficie&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.3636644480311 20.654232223627076)&#92;&quot;},{&#92;&quot;Id&#92;&quot;:0,&#92;&quot;NOMBRE&#92;&quot;:&#92;&quot;ESTACION WASHINGTON&#92;&quot;,&#92;&quot;Detalle&#92;&quot;:&#92;&quot;Subterranea&#92;&quot;,&#92;&quot;geometry&#92;&quot;:&#92;&quot;POINT (-103.35744057149749 20.66104297215328)&#92;&quot;}]&quot;' data-total-rows='18' data-total-columns='4' data-max-columns='50' data-banner-text='&quot;&quot;' data-pagination='true' data-page-size='10' data-field-types='[[&quot;Id&quot;,[&quot;integer&quot;,&quot;int32&quot;]],[&quot;NOMBRE&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;Detalle&quot;,[&quot;unknown&quot;,&quot;str&quot;]],[&quot;geometry&quot;,[&quot;unknown&quot;,&quot;geometry&quot;]]]' data-show-filters='true' data-show-download='true' data-show-column-summaries='true' data-show-data-types='true' data-show-page-size-selector='true' data-show-column-explorer='true' data-show-chart-builder='true' data-row-headers='[]' data-has-stable-row-id='false' data-lazy='false' data-preload='false'></marimo-table></marimo-ui-element>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "xXTn",
+      "code_hash": "b20559dacafe20f5fdedc65cb94a2c45",
+      "outputs": [
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'ax' was defined by another cell",
+          "traceback": []
+        },
+        {
+          "type": "error",
+          "ename": "multiple-defs",
+          "evalue": "The variable 'fig' was defined by another cell",
+          "traceback": []
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "AjVT",
+      "code_hash": "c2ccd2fec9a2aeb515c47eb2fb72584e",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><span class=\"paragraph\">\u00bfQu\u00e9 tal si de una graficamos todo?</span></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "pHFh",
+      "code_hash": "cfc3bd39933221aa834087bb43bad552",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "NCOB",
+      "code_hash": "e12960bbfcf40f2abbb71aa31747b593",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h2 id=\"leyendo-shapefiles-shp-caminos-en-el-amg-2012\">Leyendo shapefiles (.shp) : Caminos en el AMG (2012)</h2></span>"
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "aqbW",
+      "code_hash": "dace132a32f8e14bcdbedf3412d7928a",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TRpd",
+      "code_hash": "cd5d091f87e822554dbb9143e63f3ee2",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/plain": ""
+          }
+        }
+      ],
+      "console": []
+    },
+    {
+      "id": "TXez",
+      "code_hash": "6a122ea9fdc58c4a4baff1b65cac1e23",
+      "outputs": [
+        {
+          "type": "data",
+          "data": {
+            "text/markdown": "<span class=\"markdown prose dark:prose-invert contents\"><h3 id=\"actividad-autonoma\">Actividad aut\u00f3noma</h3>\n<ul>\n<li>\n<span class=\"paragraph\">Tome el archivo de colonias, lea y grafique coloreando por municipio.</span>\n<ul>\n<li>El object type es <code>colonias</code>, estos files no tienen subcarpetas como los del tren.</li>\n</ul>\n</li>\n<li>\n<span class=\"paragraph\">Sobre el archivo de colonias agregue lo ya hecho de l\u00edneas del tren ligero.</span>\n<ul>\n<li>El objetivo de este punto es replicar la gr\u00e1fica que ya existe de estaciones con nombres M\u00c1S el plot de colonias.</li>\n<li>Para que te sea m\u00e1s f\u00e1cil preg\u00fantate, \u00bfnecesitas modificar algo del <code>for</code> para que esto funcione? Solo ten cuidado con que todo tenga el mismo <code>CRS</code> (El <code>CRS</code> indicado a utilizar es el <code>\"EPSG:4326\"</code>)</li>\n<li>Recuerda que para modificar el <code>CRS</code> de algo que ya sea un mapa (o sea que ya cuente con un <code>CRS</code>) debes usar el <code>to_crs</code>.</li>\n</ul>\n</li>\n</ul></span>"
+          }
+        }
+      ],
+      "console": []
+    }
+  ]
+}

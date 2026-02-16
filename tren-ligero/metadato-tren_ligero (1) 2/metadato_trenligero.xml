@@ -1,0 +1,265 @@
+<?xml version = "1.0" encoding = "ISO-8859-1"?>
+<Metadata>
+<MD_DataIdentification>
+<title>Tren Ligero de Guadalajara</title>
+<purpose>Representar las líneas y estaciones del Sistema de Tren Eléctrico Urbano de Guadalajara </purpose>
+<abstract>Conjunto de datos vectoriales de la cartografía que representa el Sistema de Tren Eléctrico Urbano de Guadalajara: 
+
+* Líneas: representa la vía del tren 
+* Puntos: representan las estaciones </abstract>
+<MD_DataIdentification_language>ES - Español.</MD_DataIdentification_language>
+<topicCategory>
+<principalTopic>15. Transportación: Medios y ayudas para transportar personas o mercancías. </principalTopic>
+<groupCategory>2. Grupo de datos de nombres geográficos: Subdivisión de la Infraestructura de Datos Espaciales de México que corresponde a los nombres propios de rasgos naturales y culturales con una identidad reconocible en los ámbitos continental, insular y submarino.</groupCategory>
+</topicCategory>
+<keyword>Sistema de Tren Eléctrico Urbano de Guadalajara</keyword>
+<type>3. Estrato: La palabra clave identifica una capa de cualquier material depositado.</type>
+<thesaurusName>c_tren_ligero</thesaurusName>
+<edition>Junio 2016 </edition>
+<presentationForm>  5. Mapa digital: Mapa representado en formato raster o vector.</presentationForm>
+<CI_OnlineResource>
+<CI_OnlineResource_linkage>http://datos.jalisco.gob.mx/tren-ligero</CI_OnlineResource_linkage>
+<CI_OnlineResource_description>plataforma de datos abiertos del Gobierno del Estado de Jalisco</CI_OnlineResource_description>
+</CI_OnlineResource>
+<maintenanceAndUpdateFrequency>  9. No programado: La actualización de los datos no está planeada.</maintenanceAndUpdateFrequency>
+<MD_DataIdentification_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</MD_DataIdentification_characterSet>
+<graphfilename>Tren Ligero de Guadalajara </graphfilename>
+<specuse>Realizar estudios con la utilización de los datos proporcionados </specuse>
+</MD_DataIdentification>
+<CI_Date>
+<Dates_Events>
+<date>2016-06-01</date>
+<dateType>1. Creación: Indicador  de la fecha que especifica cuando fue creado el recurso.</dateType>
+</Dates_Events>
+<Ad_Date>
+<date_creation></date_creation>
+<date_begin></date_begin>
+<date_end></date_end>
+<inpname></inpname>
+</Ad_Date>
+</CI_Date>
+<CI_ResponsibleParty>
+<CI_ResponsibleParty_individualName>Unidad de Geografía y Medio Ambiente </CI_ResponsibleParty_individualName>
+<CI_ResponsibleParty_organisationName>Instituto de Información Estadística y Geográfica del Estado de Jalisco</CI_ResponsibleParty_organisationName>
+<CI_ResponsibleParty_positionName>Director de la Unidad de Geografía y Medio Ambiente</CI_ResponsibleParty_positionName>
+<CI_ResponsibleParty_voice></CI_ResponsibleParty_voice>
+<CI_ResponsibleParty_facsimile></CI_ResponsibleParty_facsimile>
+<CI_ResponsibleParty_deliveryPoint>Pirules 71</CI_ResponsibleParty_deliveryPoint>
+<CI_ResponsibleParty_city>Zapopan</CI_ResponsibleParty_city>
+<CI_ResponsibleParty_administrativeArea>Jalisco</CI_ResponsibleParty_administrativeArea>
+<CI_ResponsibleParty_postalCode>45010</CI_ResponsibleParty_postalCode>
+<CI_ResponsibleParty_country>México</CI_ResponsibleParty_country>
+<CI_ResponsibleParty_electronicMailAddress></CI_ResponsibleParty_electronicMailAddress>
+<CI_ResponsibleParty_linkage>http://iieg.gob.mx</CI_ResponsibleParty_linkage>
+<CI_ResponsibleParty_role>  6. Creador: Parte que creó el recurso.</CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<geographicElement>
+<EX_GeographicBoundingBox>
+<westBoundLongitude>-103.2</westBoundLongitude>
+<eastBoundLongitude>-103</eastBoundLongitude>
+<southBoundLatitude>20.62</southBoundLatitude>
+<northBoundLatitude>20.75</northBoundLatitude>
+</EX_GeographicBoundingBox>
+<spatialRepresentationType></spatialRepresentationType>
+</geographicElement>
+<MD_ReferenceSystem>
+<ReferenceHorizontalSystem>
+<geograph>
+<latres></latres>
+<longres></longres>
+<geogunit></geogunit>
+</geograph>
+<planar>
+<mapprojn>
+<lambertc>
+<lambertc_stdparll></lambertc_stdparll>
+<lambertc_longcm></lambertc_longcm>
+<lambertc_latprjo></lambertc_latprjo>
+<lambertc_feast></lambertc_feast>
+<lambertc_fnorth></lambertc_fnorth>
+</lambertc>
+<mercatort>
+<mercatort_sfctrmer></mercatort_sfctrmer>
+<mercatort_longcm></mercatort_longcm>
+<mercatort_latprjo></mercatort_latprjo>
+<mercatort_feast></mercatort_feast>
+<mercatort_fnorth></mercatort_fnorth>
+</mercatort>
+<mercator>
+<mercator_stdparll></mercator_stdparll>
+<mercator_sfec></mercator_sfec>
+<mercator_longcm></mercator_longcm>
+<mercator_feast></mercator_feast>
+<mercator_fnorth></mercator_fnorth>
+</mercator>
+<tme>
+<tme_sfctrmer></tme_sfctrmer>
+<tme_longcm></tme_longcm>
+<tme_latprjo></tme_latprjo>
+<tme_feast></tme_feast>
+<tme_fnorth></tme_fnorth>
+</tme>
+<anoth_proj_def></anoth_proj_def>
+</mapprojn>
+<gridcoordinatessystem>
+<utm>
+<utm_zone></utm_zone>
+<utm_sfctrmer></utm_sfctrmer>
+<utm_longcm></utm_longcm>
+<utm_latprjo></utm_latprjo>
+<utm_feast></utm_feast>
+<utm_fnorth></utm_fnorth>
+</utm>
+</gridcoordinatessystem>
+<local_planar>
+<local_planar_desc></local_planar_desc>
+<local_planar_geo_inf></local_planar_geo_inf>
+</local_planar>
+<planci>
+<plance></plance>
+<coord_repres>
+<absres></absres>
+<ordres></ordres>
+</coord_repres>
+<distance_and_bearing_repres>
+<distance_res></distance_res>
+<bearing_res></bearing_res>
+<bearing_uni></bearing_uni>
+<ref_bearing_dir></ref_bearing_dir>
+<ref_bearing_mer></ref_bearing_mer>
+</distance_and_bearing_repres>
+<plandu></plandu>
+</planci>
+</planar>
+<local_coordinates>
+<local_desc></local_desc>
+<local_geo_inf></local_geo_inf>
+</local_coordinates>
+<geodetic>
+<horizdn></horizdn>
+<ellips></ellips>
+<semiaxis></semiaxis>
+<denflat></denflat>
+</geodetic>
+</ReferenceHorizontalSystem>
+<ReferenceVerticalSystem>
+<altsys>
+<altdatum></altdatum>
+<altres></altres>
+<altunits></altunits>
+<altenc></altenc>
+</altsys>
+<depthsys>
+<depthdn></depthdn>
+<depthres></depthres>
+<depthdu></depthdu>
+<depthem></depthem>
+</depthsys>
+</ReferenceVerticalSystem>
+</MD_ReferenceSystem>
+<DQ_DataQuality>
+<DQ_Scope>
+<level>  2. Tipo de atributo: Información aplicada a la característica del objeto.</level>
+</DQ_Scope>
+<report>
+<DQ_Completeness>
+<DQ_Completeness_evalqualsubname>
+<DQ_Completeness_nameOfMeasure></DQ_Completeness_nameOfMeasure>
+<DQ_Completeness_measureDescription></DQ_Completeness_measureDescription>
+<DQ_Completeness_result>
+<DQ_Completeness_DQ_QuantitativeResult>
+<DQ_Completeness_valueUnit></DQ_Completeness_valueUnit>
+<DQ_Completeness_value></DQ_Completeness_value></DQ_Completeness_DQ_QuantitativeResult>
+</DQ_Completeness_result>
+</DQ_Completeness_evalqualsubname>
+</DQ_Completeness>
+<DQ_LogicConsistency>
+<DQ_LogicConsistency_evalqualsubname>
+<DQ_LogicConsistency_nameOfMeasure></DQ_LogicConsistency_nameOfMeasure>
+<DQ_LogicConsistency_measureDescription></DQ_LogicConsistency_measureDescription>
+<DQ_LogicConsistency_result>
+<DQ_LogicConsistency_DQ_QuantitativeResult>
+<DQ_LogicConsistency_valueUnit></DQ_LogicConsistency_valueUnit>
+<DQ_LogicConsistency_value></DQ_LogicConsistency_value></DQ_LogicConsistency_DQ_QuantitativeResult>
+</DQ_LogicConsistency_result>
+</DQ_LogicConsistency_evalqualsubname>
+</DQ_LogicConsistency>
+<PositionalAccuracy>
+<PositionalAccuracy_evalqualsubname>
+<PositionalAccuracy_nameOfMeasure></PositionalAccuracy_nameOfMeasure>
+<PositionalAccuracy_measureDescription></PositionalAccuracy_measureDescription>
+<PositionalAccuracy_result>
+<PositionalAccuracy_DQ_QuantitativeResult>
+<PositionalAccuracy_valueUnit></PositionalAccuracy_valueUnit>
+<PositionalAccuracy_value></PositionalAccuracy_value></PositionalAccuracy_DQ_QuantitativeResult>
+</PositionalAccuracy_result>
+</PositionalAccuracy_evalqualsubname>
+</PositionalAccuracy>
+<TemporalAccuracy>
+<TemporalAccuracy_evalqualsubname>
+<TemporalAccuracy_nameOfMeasure></TemporalAccuracy_nameOfMeasure>
+<TemporalAccuracy_measureDescription></TemporalAccuracy_measureDescription>
+<TemporalAccuracy_result>
+<TemporalAccuracy_DQ_QuantitativeResult>
+<TemporalAccuracy_valueUnit></TemporalAccuracy_valueUnit>
+<TemporalAccuracy_value></TemporalAccuracy_value></TemporalAccuracy_DQ_QuantitativeResult>
+</TemporalAccuracy_result>
+</TemporalAccuracy_evalqualsubname>
+</TemporalAccuracy>
+<ThematicAccuracy>
+<ThematicAccuracy_evalqualsubname>
+<ThematicAccuracy_nameOfMeasure></ThematicAccuracy_nameOfMeasure>
+<ThematicAccuracy_measureDescription></ThematicAccuracy_measureDescription>
+<ThematicAccuracy_result>
+<ThematicAccuracy_DQ_QuantitativeResult>
+<ThematicAccuracy_valueUnit></ThematicAccuracy_valueUnit>
+<ThematicAccuracy_value></ThematicAccuracy_value></ThematicAccuracy_DQ_QuantitativeResult>
+</ThematicAccuracy_result>
+</ThematicAccuracy_evalqualsubname>
+</ThematicAccuracy>
+</report>
+<LI_Lineage>
+<statement></statement>
+<LI_ProcessStep>
+<LI_ProcessStep_description></LI_ProcessStep_description>
+</LI_ProcessStep>
+<LI_Source>
+<LI_Source_description></LI_Source_description>
+</LI_Source>
+</LI_Lineage>
+</DQ_DataQuality>
+<Attributes>
+<schemaAscii></schemaAscii>
+<entity_detail></entity_detail>
+</Attributes>
+<MD_Distribution>
+<accessConstraints></accessConstraints>
+<useConstraints></useConstraints>
+<otherConstraints></otherConstraints>
+<MD_Format>
+<name>ESRI SHAPE </name>
+<version>1.0</version>
+</MD_Format>
+</MD_Distribution>
+<Inf_Metadata>
+<metadataStandardName>ISO 19115 Información Geográfica - Metadatos (Norma Técnica para Metadatos). </metadataStandardName>
+<metadataStandardVersion>2003 (1.0).</metadataStandardVersion>
+<Inf_Metadata_language>ES - Español.</Inf_Metadata_language>
+<CI_ResponsibleParty>
+<Inf_Metadata_CI_ResponsibleParty_individualName>Unidad de Geografía y Medio Ambiente</Inf_Metadata_CI_ResponsibleParty_individualName>
+<Inf_Metadata_CI_ResponsibleParty_organisationName>Instituto de Información Estadística y Geográfica del Estado de Jalisco </Inf_Metadata_CI_ResponsibleParty_organisationName>
+<Inf_Metadata_CI_ResponsibleParty_positionName>Director de la Unidad de Geografía y Medio Ambiente </Inf_Metadata_CI_ResponsibleParty_positionName>
+<Inf_Metadata_CI_ResponsibleParty_voice></Inf_Metadata_CI_ResponsibleParty_voice>
+<Inf_Metadata_CI_ResponsibleParty_facsimile></Inf_Metadata_CI_ResponsibleParty_facsimile>
+<Inf_Metadata_CI_ResponsibleParty_deliveryPoint>Pirules 71</Inf_Metadata_CI_ResponsibleParty_deliveryPoint>
+<Inf_Metadata_CI_ResponsibleParty_city>Zapopan, Jalisco </Inf_Metadata_CI_ResponsibleParty_city>
+<Inf_Metadata_CI_ResponsibleParty_administrativeArea>Jalisco</Inf_Metadata_CI_ResponsibleParty_administrativeArea>
+<Inf_Metadata_CI_ResponsibleParty_postalCode>45010</Inf_Metadata_CI_ResponsibleParty_postalCode>
+<Inf_Metadata_CI_ResponsibleParty_country>México </Inf_Metadata_CI_ResponsibleParty_country>
+<Inf_Metadata_CI_ResponsibleParty_electronicMailAddress>contacto.iieg@jalisco.gob.mx</Inf_Metadata_CI_ResponsibleParty_electronicMailAddress>
+<Inf_Metadata_CI_ResponsibleParty_role>  1. Proveedor del recurso: Parte que suministra el recurso.</Inf_Metadata_CI_ResponsibleParty_role>
+</CI_ResponsibleParty>
+<dateStamp></dateStamp>
+<Inf_Metadata_characterSet>  6. 8859parte1: ISO/IEC 8859-1, Tecnologías de la Información - Conjuntos de caracteres gráficos codificados de 8-bit por byte - Parte 1: Alfabeto Latino No.1.</Inf_Metadata_characterSet>
+</Inf_Metadata>
+</Metadata>

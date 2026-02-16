@@ -1,0 +1,231 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="c_est_tren_l3" id="c_est_tren_l3">
+	<SimpleField name="Descriptio" type="string"></SimpleField>
+	<SimpleField name="PONDE" type="float"></SimpleField>
+	<SimpleField name="NUMERO" type="int"></SimpleField>
+	<SimpleField name="CALIF" type="int"></SimpleField>
+	<SimpleField name="CoordY" type="float"></SimpleField>
+	<SimpleField name="CoordX" type="float"></SimpleField>
+	<SimpleField name="Fuente" type="string"></SimpleField>
+</Schema>
+<Folder><name>c_est_tren_l3</name>
+  <Placemark>
+	<name>ESTACION BASILICA</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">42.75000000000</SimpleData>
+		<SimpleData name="NUMERO">4</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2292303.36805000020</SimpleData>
+		<SimpleData name="CoordX">667895.69385499996</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.38763180972529,20.722778669082825,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION BELENES ZAPOPAN</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">48.25000000000</SimpleData>
+		<SimpleData name="NUMERO">2</SimpleData>
+		<SimpleData name="CALIF">8</SimpleData>
+		<SimpleData name="CoordY">2293855.41857000020</SimpleData>
+		<SimpleData name="CoordX">666403.43019200000</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.40181122602165,20.736931067050641,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION CATEDRAL</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">32.50000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">5</SimpleData>
+		<SimpleData name="CoordY">2287066.16930000020</SimpleData>
+		<SimpleData name="CoordX">672145.25705599994</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34734697323265,20.675088166186512,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION CIRCUNVALACION</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">28.55000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">5</SimpleData>
+		<SimpleData name="CoordY">2290409.22421000010</SimpleData>
+		<SimpleData name="CoordX">670302.52316999994</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.36470875578947,20.705452206417082,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION CUCEI</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">31.00000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">5</SimpleData>
+		<SimpleData name="CoordY">2285050.46352000020</SimpleData>
+		<SimpleData name="CoordX">675055.98996699997</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.31961221397937,20.656612044076844,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION PERIFERICO-ZAPOPAN</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">32.32000000000</SimpleData>
+		<SimpleData name="NUMERO">1</SimpleData>
+		<SimpleData name="CALIF">5</SimpleData>
+		<SimpleData name="CoordY">2294512.09966999990</SimpleData>
+		<SimpleData name="CoordX">665540.22512700001</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.41003731887025,20.742939316844282,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION FEDERALISMO</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">42.91000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2289734.30077000010</SimpleData>
+		<SimpleData name="CoordX">671326.98893300002</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35494038004802,20.699262468038217,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION INDEPENDENCIA SUR</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">56.25000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">9</SimpleData>
+		<SimpleData name="CoordY">2286577.45648000020</SimpleData>
+		<SimpleData name="CoordX">672460.40641800000</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34437024362835,20.670644990119932,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION NORMAL</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">43.41000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2289284.58448999980</SimpleData>
+		<SimpleData name="CoordX">671994.66638399998</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34857541626042,20.695139204739132,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION MERCADO DEL MAR</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">44.25000000000</SimpleData>
+		<SimpleData name="NUMERO">3</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2292969.87838000010</SimpleData>
+		<SimpleData name="CoordX">667675.86203299998</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.3896786496109,20.728818588580236,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION NODO REVOLUCION</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">40.25000000000</SimpleData>
+		<SimpleData name="NUMERO">17</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2282214.76360000020</SimpleData>
+		<SimpleData name="CoordX">677581.74268000002</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.29566062423835,20.630762195217304,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION PLAZA DE LA BANDERA</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">46.25000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">8</SimpleData>
+		<SimpleData name="CoordY">2285991.58478000020</SimpleData>
+		<SimpleData name="CoordX">673653.16808199999</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.33298105706332,20.665243006055825,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION PLAZA PATRIA</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">26.75000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">4</SimpleData>
+		<SimpleData name="CoordY">2291268.83826000010</SimpleData>
+		<SimpleData name="CoordX">669013.14025000005</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.37700332404384,20.713333618199183,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION RIO NILO</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">39.50000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">6</SimpleData>
+		<SimpleData name="CoordY">2283723.34088000000</SimpleData>
+		<SimpleData name="CoordX">676701.66576999996</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.30395330866422,20.644470873247233,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION SANTUARIO</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">41.50000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">7</SimpleData>
+		<SimpleData name="CoordY">2288077.58199999990</SimpleData>
+		<SimpleData name="CoordX">672077.85315900005</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34789500044954,20.684229659601897,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION TLAQUEPAQUE CENTRO</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">46.00000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">8</SimpleData>
+		<SimpleData name="CoordY">2283106.88878000020</SimpleData>
+		<SimpleData name="CoordX">677020.57307499996</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.30095518475163,20.638872960357869,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION PLAZA REVOLUCION</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">39.25000000000</SimpleData>
+		<SimpleData name="NUMERO">0</SimpleData>
+		<SimpleData name="CALIF">6</SimpleData>
+		<SimpleData name="CoordY">2284401.87023000000</SimpleData>
+		<SimpleData name="CoordX">676081.10991400003</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.30983993143244,20.650657807399487,0</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<name>ESTACION CENTRAL CAMIONERA</name>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l3">
+		<SimpleData name="PONDE">59.00000000000</SimpleData>
+		<SimpleData name="NUMERO">18</SimpleData>
+		<SimpleData name="CALIF">10</SimpleData>
+		<SimpleData name="CoordY">2281383.00000000000</SimpleData>
+		<SimpleData name="CoordX">678669.00000000000</SimpleData>
+		<SimpleData name="Fuente">SEMOV 2015</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.28531334611253,20.623146457974709,0</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

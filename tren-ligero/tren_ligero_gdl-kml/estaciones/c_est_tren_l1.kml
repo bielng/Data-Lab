@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="c_est_tren_l1" id="c_est_tren_l1">
+	<SimpleField name="Id" type="int"></SimpleField>
+	<SimpleField name="NOMBRE" type="string"></SimpleField>
+	<SimpleField name="Detalle" type="string"></SimpleField>
+</Schema>
+<Folder><name>c_est_tren_l1</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION PERIFERICO SUR</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.4007340141827,20.607186834339043</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION SANTUARIO MARTIRES DE CRISTO REY</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.3955883685158,20.613745345583133</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION ESPAÑA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.38936428631536,20.621419349549075</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION PATRIA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.38491615435841,20.626743534028236</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION ISLA RAZA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.38053665843353,20.632749395833677</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION 18 DE MARZO</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.37688694070779,20.638140569832395</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION URDANETA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.37272095142825,20.643108522226402</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION UNIDAD DEPORTIVA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.36909549824334,20.647364449356392</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION SANTA FILOMENA</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.36366444803036,20.654232223626927</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION WASHINGTON</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35744057149675,20.66104297215313</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION MEXICALTZINGO</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35534123195853,20.66693738810228</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION JUAREZ1</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35467617854923,20.674925705895557</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION REFUGIO</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35408817085435,20.682118866183</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION MEZQUITAN</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35386804425512,20.691533118653993</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION AVILA CAMACHO</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35492506238931,20.698300638793693</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION DIVISION DEL NORTE</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35435561492875,20.716048158653688</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION DERMATOLOGICO</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35329630474526,20.720985368183172</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l1">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION PERIFERICO NORTE</SimpleData>
+		<SimpleData name="Detalle">Superficie</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35244849290308,20.730316246317162</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>

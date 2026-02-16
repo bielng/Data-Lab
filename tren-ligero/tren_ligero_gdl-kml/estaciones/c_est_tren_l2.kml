@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<kml xmlns="http://www.opengis.net/kml/2.2">
+<Document id="root_doc">
+<Schema name="c_est_tren_l2" id="c_est_tren_l2">
+	<SimpleField name="Id" type="int"></SimpleField>
+	<SimpleField name="NOMBRE" type="string"></SimpleField>
+	<SimpleField name="Detalle" type="string"></SimpleField>
+</Schema>
+<Folder><name>c_est_tren_l2</name>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION JUAREZ2</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.35467617854923,20.674925705895557</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION PLAZA UNIVERSIDAD</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34802110897563,20.675118827199817</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION SAN JUAN DE DIOS</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.34081287479073,20.675207340468308</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION BELISARIO DOMINGUEZ</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.3307286455527,20.672512839738491</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION OBLATOS</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.32267868560267,20.670293264472875</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION CRISTOBAL DE OÑATE</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.31349250411763,20.667514628731819</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION SAN ANDRES</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.30553553243034,20.665089651602131</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION SAN JACINTO</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.29733722323586,20.663837810335504</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION LA AURORA</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.28594537018719,20.662520895695668</coordinates></Point>
+  </Placemark>
+  <Placemark>
+	<ExtendedData><SchemaData schemaUrl="#c_est_tren_l2">
+		<SimpleData name="Id">0</SimpleData>
+		<SimpleData name="NOMBRE">ESTACION TETLAN</SimpleData>
+		<SimpleData name="Detalle">Subterranea</SimpleData>
+	</SchemaData></ExtendedData>
+      <Point><coordinates>-103.27602630376444,20.659784148239673</coordinates></Point>
+  </Placemark>
+</Folder>
+</Document></kml>
